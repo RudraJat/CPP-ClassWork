@@ -1,43 +1,20 @@
-#include <iostream>
+#include<iostream>
+#include<utility>
 using namespace std;
-
-void bubbleSort(int arr[], int n) {
-    // Traverse through all array elements
-    for (int i = 0; i < n - 1; i++) {
-        // Last i elements are already in place
-        for (int j = 0; j < n - i - 1; j++) {
-            // Swap if the element found is greater than the next element
-            if (arr[j] > arr[j + 1]) {
-                // Swap arr[j] and arr[j + 1]
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
-            }
-        }
+class Student{
+    int rollno;
+    int fees;
+    public:
+    Student(int a,int m){
+        rollno=a;
+        fees=m;
     }
-}
-void printArray(int arr[], int n) {
-    for (int i = 0; i < n; i++) {
-        cout << arr[i] << " ";
+    operator pair<int,int>(){
+        return make_pair(rollno,fees);
     }
-    cout << endl;
-}
-
-
-
-
-
-int main() {
-    int arr[] = {64, 34, 25, 12, 22, 11, 90};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    
-    cout << "Original array: ";
-    printArray(arr, n);
-    
-    bubbleSort(arr, n);
-    
-    cout << "Sorted array: ";
-    printArray(arr, n);
-    
-    return 0;
+};
+int main(){
+    Student st(5,45000);
+    pair<int,int> details=st;
+    cout<<"Roll no: "<<details.first<<" Fees: "<<details.second;
 }
