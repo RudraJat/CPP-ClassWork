@@ -20,5 +20,17 @@ int main(){
         cout<<vector3[i]<<" ";
     }
     cout<<endl;
+    //take input from user
+    int n;
+    cin>>n;
+    vector<int>vector4;
+    for(int i=0;i<n;i++){
+        int x;
+        cin>>x;
+        vector4.push_back(x);
+    }
+    for(int i=0;i<n;i++){
+        cout<<vector4[i]<<" ";
+    }
     return 0;
 }
