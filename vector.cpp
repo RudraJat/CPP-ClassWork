@@ -7,12 +7,17 @@ int main(){
     //adding element at last
     vector1.push_back(6);
     vector1.push_back(7);
-    //delete element from last
     //2nd way
     vector<int> vector2{1,2,7,8,9};
     //3rd way
     vector<int>vector3(5,18);
     for(int i=0;i<7;i++){
+        cout<<vector1[i]<<" ";
+    }
+    cout<<endl;
+    //delete element from last
+    vector1.pop_back();
+    for(int i=0;i<vector1.size();i++){
         cout<<vector1[i]<<" ";
     }
     cout<<endl;
