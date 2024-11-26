@@ -21,6 +21,12 @@ int main(){
     
     //delete element from last
     vector1.pop_back();
+
+
+    //UPDATE VALUE OF OF ANY INDEX
+    vector3.at(1)=9;
+    vector3.at(4)=4;
+    
     for(int i=0;i<vector1.size();i++){
         cout<<vector1[i]<<" ";
     }
@@ -37,8 +43,9 @@ int main(){
 
     //FOR PRINTING VALUE OF SPECIFIC INDEX
     cout<<"Element of vector3 at Index 0: "<<vector3.at(0)<<endl;
-    cout<<"Element of vector3 at Index 0: "<<vector3.at(0)<<endl;
-    cout<<"Element of vector3 at Index 0: "<<vector3.at(0)<<endl;
+    cout<<"Element of vector3 at Index 1: "<<vector3.at(1)<<endl;
+    cout<<"Element of vector3 at Index 3: "<<vector3.at(3)<<endl;
+
 
     // take input from user
     int n;
@@ -49,6 +56,12 @@ int main(){
         cin>>x;
         vector4.push_back(x);
     }
+    for(int i=0;i<n;i++){
+        cout<<vector4[i]<<" ";
+    }
+    cout<<endl;
+    vector4.clear();
+    cout<<"after clearing"<<endl;
     for(int i=0;i<n;i++){
         cout<<vector4[i]<<" ";
     }
