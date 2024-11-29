@@ -33,7 +33,7 @@ int main(){
         cin>>num;
         arr.push_back(num);
     }
-    sort(arr.begin(),arr.end());
+    sort(arr.begin(),arr.end(),greater<int>());
     for(int num: arr){
         cout<<num<<" ";
     }
